@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="1.7" client="site" method="upgrade">
+<name>ShoutCast Radio Player V2</name>
+<author>Dimedia</author>
+<creationDate>31.07.2012</creationDate>
+<copyright>Copyright (C) 2013</copyright>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<authorEmail>info@dimedia.tk</authorEmail>
+<authorUrl>http://www.dimedia.tk</authorUrl>
+<version>2.3</version>
+<description>Free Shoutcast Radio Player by Dimedia! If you need help contact us: support@dimedia.tk! Free ShoutCast Hosting: http://www.bumhosting.net</description>
+<languages>
+</languages>
+<files>
+	<filename module="mod_shoutcastplayer_v2">mod_shoutcastplayer_v2.php</filename>
+	
+	<filename>muses.swf</filename>
+	
+	<filename>jsp-dimedia.xml</filename>
+	<filename>jsp-dimedia/bg.png</filename>
+	<filename>jsp-dimedia/play.png</filename>
+	<filename>jsp-dimedia/playclick.png</filename>
+	<filename>jsp-dimedia/statusplay.png</filename>
+	<filename>jsp-dimedia/statusstop.png</filename>
+	<filename>jsp-dimedia/stop.png</filename>
+	<filename>jsp-dimedia/stopclick.png</filename>
+	<filename>jsp-dimedia/holder.png</filename>
+	
+	<filename>jsp-mcclean.xml</filename>
+	<filename>jsp-mcclean/bg.png</filename>
+	<filename>jsp-mcclean/holder.png</filename>
+	<filename>jsp-mcclean/play.gif</filename>
+	<filename>jsp-mcclean/playclick.jpg</filename>
+	<filename>jsp-mcclean/statusplay.png</filename>
+	<filename>jsp-mcclean/statusstop.png</filename>
+	<filename>jsp-mcclean/stop.jpg</filename>
+	<filename>jsp-mcclean/stopclick.jpg</filename>
+	
+	<filename>jsp-darkconsole.xml</filename>
+	<filename>jsp-darkconsole/bg.jpg</filename>
+	<filename>jsp-darkconsole/play.jpg</filename>
+	<filename>jsp-darkconsole/playclick.jpg</filename>
+	<filename>jsp-darkconsole/statusplay.png</filename>
+	<filename>jsp-darkconsole/statusstop.png</filename>
+	<filename>jsp-darkconsole/stop.jpg</filename>
+	<filename>jsp-darkconsole/stopclick.jpg</filename>
+	<filename>jsp-darkconsole/holder.png</filename>
+	
+	<filename>jsp-eastanbul.xml</filename>
+	<filename>jsp-eastanbul/bg.jpg</filename>
+	<filename>jsp-eastanbul/play.png</filename>
+	<filename>jsp-eastanbul/playclick.png</filename>
+	<filename>jsp-eastanbul/statusplay.jpg</filename>
+	<filename>jsp-eastanbul/statusstop.jpg</filename>
+	<filename>jsp-eastanbul/stop.png</filename>
+	<filename>jsp-eastanbul/stopclick.png</filename>
+	<filename>jsp-eastanbul/holder.jpg</filename>
+	
+	<filename>faredirfare.xml</filename>
+	<filename>jsp-faredirfare/skin-bg.png</filename>
+	<filename>jsp-faredirfare/play.png</filename>
+	<filename>jsp-faredirfare/play-click.png</filename>
+	<filename>jsp-faredirfare/status-play.png</filename>
+	<filename>jsp-faredirfare/status-stop.png</filename>
+	<filename>jsp-faredirfare/stop.png</filename>
+	<filename>jsp-faredirfare/stop-click.png</filename>
+	
+	<filename>jsp-tweety.xml</filename>
+	<filename>jsp-tweety/bg.jpg</filename>
+	<filename>jsp-tweety/play.jpg</filename>
+	<filename>jsp-tweety/playclick.jpg</filename>
+	<filename>jsp-tweety/statusplay.jpg</filename>
+	<filename>jsp-tweety/statusstop.jpg</filename>
+	<filename>jsp-tweety/stop.jpg</filename>
+	<filename>jsp-tweety/stopclick.jpg</filename>
+	<filename>jsp-tweety/holder.jpg</filename>
+	
+	<filename>jsp-bumeter.xml</filename>
+	<filename>jsp-bumeter/bg.gif</filename>
+	<filename>jsp-bumeter/music.gif</filename>
+	<filename>jsp-bumeter/holder.jpg</filename>
+	<filename>jsp-bumeter/play.png</filename>
+	<filename>jsp-bumeter/statusplay.png</filename>
+	<filename>jsp-bumeter/statusstop.png</filename>
+	<filename>jsp-bumeter/stop.png</filename>
+	
+</files>
+<config>
+<fields name="params">
+<fieldset name="basic"> 
+<field name="name" type="text" default="MyRadio" label="Radio Title" description="Title of the radio station" />
+<field name="skin" type="list" default="jsp-mcclean" label="Skin" description="Choose the player">
+	<option value="jsp-dimedia">jsp-dimedia</option>
+	<option value="jsp-mcclean">jsp-mcclean</option>
+	<option value="jsp-darkconsole">jsp-darkconsole</option>
+	<option value="jsp-eastanbul">jsp-eastanbul</option>
+	<option value="jsp-tweety">jsp-tweety</option>
+	<option value="faredirfare">faredirfare</option>
+	<option value="jsp-bumeter">jsp-bumeter</option>
+</field>
+<field name="autostart" type="list" default="yes" label="Auto Start" description="Do you want to start the stream automaticlly?">
+	<option value="true">Yes</option>
+	<option value="false">No</option>
+</field>
+<field name="volume" type="list" default="80" label="Volume" description="Volume at start">
+	<option value="10">10</option>
+	<option value="20">20</option>
+	<option value="30">30</option>
+	<option value="40">40</option>
+	<option value="50">50</option>
+	<option value="60">60</option>
+	<option value="70">70</option>
+	<option value="80">80</option>
+	<option value="90">90</option>
+	<option value="100">100</option>
+</field>
+<field name="url" type="textarea" default="http://s1.bumhosting.net:8000" label="SHOUTCast Stream URL" description="URL and Port of the SHOUTCast or IceCast stream" cols="40" rows="1" />	
+<field name="stream" type="list" default="Shoutcast" label="Stream type" description="Shoutcast or Icecast?">
+	<option value="sc">Shoutcast</option>
+	<option value="ic">Icecast</option>
+</field>
+<field name="introurl" type="textarea" default="" label="Intro Audio File (optional)" description="If you want to play an audio file before the stream, enter a URL! F.E.: http://www.musesradioplayer.com/froggies-ad.mp3" cols="40" rows="1" />
+<field name="fallback" type="textarea" default="" label="Fallback File (optional)" description="If your stream stops, a fallback file will be played (only mp3!) F.E.: http://www.musesradioplayer.com/froggies-ad.mp3" cols="40" rows="1" />
+<field name="welcome" type="text" default="Welcome" label="Message (optional)" description="Welcome message shown on the player (Only if you add intro file!)" />
+</fieldset>
+
+<fieldset name="advanced">	
+	<field name="codec" type="list" default="mp3" label="Codec" description="Choose codec of the stream">
+	<option value="mp3">mp3</option>
+	<option value="ogg">ogg</option>
+	</field>
+	<field name="track" type="list" default="Yes" label="Allow tracking?" description="Allows us to improve the module.">
+	<option value="true">Yes</option>
+	<option value="false">No</option>
+	</field>
+</fieldset>
+</fields>
+</config>
+</extension>
