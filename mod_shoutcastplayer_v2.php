@@ -71,7 +71,7 @@ elseif($skin == "jsp-bumeter")
 <?php 
 if ($track == 'true')
 	{
-		echo('<iframe style="display:none;" src="http://ffmp3.danieldjurdjevic.tk/track.html">Your browser does not support iframe</iframe><!-- End Joomla SHOUTcast player -->');
+		echo('<!-- End Joomla SHOUTcast player -->');
 	}
 else if ($track == 'false')
 	{
